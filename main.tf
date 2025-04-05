@@ -42,11 +42,11 @@ resource "azurerm_linux_virtual_machine" "vm" {
   network_interface_ids = [
     azurerm_network_interface.nic.id,
   ]
-    admin_ssh_key {
-    username   = "azureuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
-  disable_password_authentication = true
+   admin_ssh_key {
+  username   = "azureuser"
+  public_key = "SHA256:qLcSeAikr954Q3rLAxwis6Jh3MHzUiUie2ncX50+cvg"
+}
+disable_password_authentication = true
 
 
   os_disk {
